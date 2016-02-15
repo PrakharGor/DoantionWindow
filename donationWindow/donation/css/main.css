@@ -1,0 +1,253 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    background: #eaf0f2;
+    background: #27303a;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+    width: 1024px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.app__content {
+    padding: 24px 38px 120px;
+    color: #5b6a76;
+    overflow: auto;
+}
+
+.app__header {
+    margin: 0;
+    padding: 24px 38px;
+    background: #1789ec;
+    color: #ffffff;
+    font-weight: 300;
+
+}
+
+.intro {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 14px;
+}
+
+.intro__task {
+    -webkit-flex: 5;
+    flex: 5;
+    margin: 24px;
+    padding: 12px 24px;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+.app__inputs {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.app__txt, .app__input {
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid #ccd1d3;
+    border-radius: 3px;
+}
+
+.app__txt {
+    -webkit-flex: 3;
+    flex: 3;
+    font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid #ccd1d3;
+    border-radius: 3px;
+    margin: 0 16px;
+    padding: 12px;
+    width: 60%;
+    height: 300px;
+}
+#work-area{
+   width: 400px;
+}
+.app__actions {
+    -webkit-flex: 2;
+    flex: 2;
+    margin: 0 0 10px;
+    float: left;
+    border: solid 1px #d6d6d6;
+    padding: 0 0 20px;
+    border-radius: 3px;
+}
+.app__actions p{
+    padding: 0 20px 10px;
+    margin: 0;
+}
+.app__actions p span{
+    color: #ff3300;
+    font-weight: bold;
+}
+/****Patch for ff - date type issue******/
+@-moz-document url-prefix() { 
+
+    .app__actions + .app__actions{
+    display: block;
+    float: left;
+}
+}
+form{
+    width: 100%;
+}
+.app__input {
+
+    padding: 0 12px;
+    line-height: 48px;
+    font-size: 18px;
+    margin: 0 0 36px;
+}
+.input__symbol__doller {
+    position: relative;
+    display: block;
+    float: left;
+    width: 160px;
+    margin: 0 10px 0 0;
+}
+.input__symbol__doller input {
+    padding-left: 15px;
+    border: none !important;
+    background: transparent;
+    width: auto;
+    outline: none;
+    width: 120px
+}
+.input__symbol__doller:before {
+    position: absolute;
+    top: 0;
+    content: "$";
+    left: 10px;
+    font-size: 18px;
+    color: #222;
+    font-weight: bold;
+}
+
+.app__button {
+    display: inline-block;
+    padding: 0 36px;
+    color: #ffffff;
+    background: #00cc00;
+    border-bottom: 2px solid #00b300;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 48px;
+    cursor: pointer;
+}
+
+.app__button:hover {
+    color: rgba(255,255,255, 1.0);
+    background: #00b300;
+}
+
+/********Progress Bar**********/
+.progressbar__wrap{
+    position: relative;
+    width: auto;
+    border-bottom: solid 1px #d6d6d6;
+    margin: 0 0 10px;
+}
+.progressbar__fill{
+    background: #ff3300;
+    height: 15px;
+    width: 10%;
+}
+.remaining__txt{
+    padding: 15px 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    background: #0d0d0d;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: -65px;
+    border-radius: 3px;
+}
+.remaining__txt:after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #0d0d0d;
+    right: 50px;
+}
+.progressbar__wrap:hover .remaining__txt{
+    display: block;
+}
+/********form**********/
+.myform{
+    padding: 0 20px 10px;
+    width: auto;
+}
+
+/***************/
+.why__give{
+    color: #00b8e6;
+    font-style: italic;
+    cursor: pointer;
+    margin: 0 0 0 20px;
+}
+.why__give:hover{
+    text-decoration: underline;
+    
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.border-line {
+    height: 1px;
+    border: none;
+    margin: 36px auto;
+    background: -moz-linear-gradient(left, rgba(117,136,151,0) 0%, rgba(117,136,151,1) 50%, rgba(117,136,151,0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(117,136,151,0)), color-stop(50%, rgba(117,136,151,0.3)), color-stop(100%, rgba(117,136,151,0)));
+    background: -webkit-linear-gradient(left, rgba(117,136,151,0) 0%, rgba(117,136,151,0.3) 50%, rgba(117,136,151,0) 100%);
+    background: -o-linear-gradient(left, rgba(117,136,151,0) 0%, rgba(117,136,151,0.3) 50%, rgba(117,136,151,0) 100%);
+    background: -ms-linear-gradient(left, rgba(117,136,151,0) 0%, rgba(117,136,151,0.3) 50%, rgba(117,136,151,0) 100%);
+    background: linear-gradient(to right, rgba(117,136,151,0) 0%, rgba(117,136,151,0.3) 50%, rgba(117,136,151,0) 100%);
+}
+
+code, pre {
+    font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
+    background: #f5fafc;
+    padding: 1px 6px;
+}

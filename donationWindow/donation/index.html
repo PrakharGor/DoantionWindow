@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Birthday Cal</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,300|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <div class="app">
+
+        <h1 class="app__header">Funding Window</h1>
+
+        <div class="app__content">
+
+            <hr class="border-line app__border" />
+
+            <div id="work-area" ng-app="calApp" ng-controller="calCtrl" data-ng-init="init()">
+
+
+                <div class="app__actions">
+                    <div class="progressbar__wrap">
+                        <div class="progressbar__fill" style="width:{{donationRecPercnt>100?100:donationRecPercnt;}}%;"></div>
+                        <div class="remaining__txt">{{donationRemaining>=0?"$"+donationRemaining+" still needed for this project":"Target donation received, Thanks a lot."}} </div>
+
+                    </div>
+                    <p><span>Only 3 Days left</span> to fund this project</p>
+                    <p>Join <b>{{donorCount}}</b> other donors who have supported this project. Every dollar helps.</p>
+                    <form name="myForm" class="myform">
+
+                        <span class="input__symbol__doller app__input">
+                            <input type="number" ng-model="newDonation" />
+                        </span>
+                        <a class="app__button js-update" ng-click="addDonation()">Give Now</a>
+                    </form>
+                    <span class="why__give"  ng-click="showAlert('How do we reach 5k then? :)')">Why give $50?</span>
+                </div>
+            
+              <a class="app__button js-update" ng-click="showAlert('Saved')">Save for Later</a>
+              <a class="app__button js-update" ng-click="showAlert('Shared')">Tell your friends</a>
+</div>
+
+            <hr class="border-line app__border" />
+
+        </div>
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/main.js"></script>   
+</body>
+</html>

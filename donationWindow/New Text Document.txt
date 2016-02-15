@@ -1,0 +1,5 @@
+Also make this design interactive i.e.
+
+1. Popover saying "$167 still needed for the project" should come only when I hover over orange progress indicator.
+2. When you add some amount using "Give now" button, progress indicator should increase accordingly. (PS. For the reference take that $5000 as 100%)
+3. Other interaction that you thing might be useful.
